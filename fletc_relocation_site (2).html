@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nates Real Estate Service | FLETC Relocation Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F8F9FA;
+            color: #222;
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+            padding: 100px 20px;
+            color: white;
+            background: url('US_Flag_Backlit.jpg') center/cover no-repeat;
+            overflow: hidden;
+        }
+
+        .flag-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 0;
+        }
+
+        header h1, header p, header .cta-button {
+            position: relative;
+            z-index: 2;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #B22234;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0A3161;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #0A3161;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .about {
+            text-align: center;
+        }
+
+        .about img {
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            margin: 20px auto;
+            display: block;
+            object-fit: cover;
+            border: 4px solid #B22234;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-section {
+            background: linear-gradient(rgba(10,49,97,0.85), rgba(10,49,97,0.85)), url('https://images.unsplash.com/photo-1517166357932-d20495eeffd1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .form-section input,
+        .form-section button {
+            padding: 15px;
+            margin: 5px 0;
+            width: 100%;
+            max-width: 400px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form-section input {
+            border: 2px solid #fff;
+            background-color: rgba(255,255,255,0.9);
+            color: #000;
+        }
+
+        .form-section button {
+            background-color: #B22234;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .form-section button:hover {
+            background-color: #0A3161;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            color: #555;
+            background-color: #f5f5f5;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="flag-overlay"></div>
+    <h1>Moving to Brunswick, GA to Work at FLETC?</h1>
+    <p>Get your free relocation guide — discover where to live, eat, and explore while you train or instruct at FLETC.</p>
+    <a href="#form" class="cta-button">Download the Free Guide</a>
+</header>
+
+<section>
+    <h2>Why This Guide Helps</h2>
+    <ul>
+        <li>Best neighborhoods close to FLETC</li>
+        <li>Top schools and family activities</li>
+        <li>Local restaurants and hidden gems</li>
+        <li>Step-by-step relocation checklist</li>
+        <li>Expert advice from a local real estate agent</li>
+    </ul>
+</section>
+
+<section class="about">
+    <img src="271542024976948587%202.JPG" alt="Nate Brown Headshot">
+    <h2>About Nate</h2>
+    <p>I'm Nate, a local real estate professional specializing in helping FLETC instructors and staff find the right home for their time in Brunswick. I start with a personal consultation to understand your role, timeline, and family needs — making your move stress-free and tailored to you.</p>
+</section>
+
+<section class="form-section" id="form">
+    <h2>Get Your Free Relocation Guide</h2>
+    <form action="" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="relocation_date" placeholder="When are you relocating?">
+        <button type="submit">Download Now</button>
+    </form>
+    <p>Or email us directly at <a href="mailto:natesrealestateservice@gmail.com" style="color: white; text-decoration: underline;">natesrealestateservice@gmail.com</a></p>
+</section>
+
+<footer>
+    &copy; 2025 NatesRealEstateService. All rights reserved.
+</footer>
+
+</body>
+</html>
