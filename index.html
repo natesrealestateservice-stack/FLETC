@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nates Real Estate Service | FLETC Relocation Guide</title>
+    <title>Nate's Real Estate Service | FLETC Relocation Guide</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -101,30 +102,49 @@
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
         }
 
+        /* FORM SECTION */
         .form-section {
-            background: linear-gradient(rgba(10,49,97,0.85), rgba(10,49,97,0.85)), url('https://images.unsplash.com/photo-1517166357932-d20495eeffd1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') center/cover no-repeat;
+            background: linear-gradient(rgba(10,49,97,0.85), rgba(10,49,97,0.85)), 
+                        url('https://images.unsplash.com/photo-1517166357932-d20495eeffd1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') 
+                        center/cover no-repeat;
             color: white;
             text-align: center;
             padding: 50px 20px;
         }
 
-        .form-section input,
+        .input-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 8px auto;
+        }
+
+        .input-wrapper input {
+            width: 100%;
+            padding: 15px 15px 15px 45px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgba(255,255,255,0.9);
+            font-size: 1rem;
+            color: #000;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.1rem;
+            opacity: 0.85;
+        }
+
         .form-section button {
             padding: 15px;
-            margin: 5px 0;
+            margin: 10px 0;
             width: 100%;
             max-width: 400px;
             border: none;
             border-radius: 5px;
-        }
-
-        .form-section input {
-            border: 2px solid #fff;
-            background-color: rgba(255,255,255,0.9);
-            color: #000;
-        }
-
-        .form-section button {
             background-color: #B22234;
             color: white;
             font-weight: 600;
@@ -148,23 +168,22 @@
             header h1 {
                 font-size: 2rem;
             }
-
             header p {
                 font-size: 1rem;
             }
-
             h2 {
                 font-size: 1.5rem;
             }
         }
     </style>
 </head>
+
 <body>
 
 <header>
     <div class="flag-overlay"></div>
     <h1>Moving to Brunswick, GA to Work at FLETC?</h1>
-    <p>Get your free relocation guide — discover where to live, eat, and explore while you train or instruct at FLETC.</p>
+    <p>Get your free relocation guide — discover where to live, eat, and explore while you instruct at FLETC.</p>
     <a href="#form" class="cta-button">Download the Free Guide</a>
 </header>
 
@@ -187,18 +206,74 @@
 
 <section class="form-section" id="form">
     <h2>Get Your Free Relocation Guide</h2>
-    <form action="" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="text" name="relocation_date" placeholder="When are you relocating?">
+
+    <form action="https://formsubmit.co/nate.brown2@followupboss.me" method="POST">
+
+        <!-- Hidden Settings -->
+        <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New FLETC Lead Submitted">
+
+        <!-- Add phone number to confirmation email -->
+        <input type="hidden" name="phone_in_confirmation" value="(912) 621-3054">
+
+        <!-- Name -->
+        <div class="input-wrapper">
+            <span class="input-icon">👤</span>
+            <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="input-wrapper">
+            <span class="input-icon">📧</span>
+            <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+
+        <!-- Phone -->
+        <div class="input-wrapper">
+            <span class="input-icon">📱</span>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required maxlength="14">
+        </div>
+
+        <!-- Relocation Date -->
+        <div class="input-wrapper">
+            <span class="input-icon">📅</span>
+            <input type="text" name="relocation_date" placeholder="When are you relocating?">
+        </div>
+
         <button type="submit">Download Now</button>
     </form>
-    <p>Or email us directly at <a href="mailto:natesrealestateservice@gmail.com" style="color: white; text-decoration: underline;">natesrealestateservice@gmail.com</a></p>
+
+    <p>Or email me directly at 
+        <a href="mailto:nate.brown@avalonpropertiesgroup.com" 
+           style="color: white; text-decoration: underline;">
+           nate.brown@avalonpropertiesgroup.com
+        </a>
+    </p>
 </section>
 
 <footer>
-    &copy; 2025 NatesRealEstateService. All rights reserved.
+    &copy; 2025 Nate’s Real Estate Service. All rights reserved.<br>
+    Phone: <a href="tel:19126213054">(912) 621-3054</a>
 </footer>
+
+<!-- PHONE AUTO-FORMATTING SCRIPT -->
+<script>
+document.getElementById('phone').addEventListener('input', function (e) {
+    let x = e.target.value.replace(/\D/g, '').substring(0,10);
+    let formatted = '';
+
+    if (x.length > 6) {
+        formatted = `(${x.substring(0,3)}) ${x.substring(3,6)}-${x.substring(6,10)}`;
+    } else if (x.length > 3) {
+        formatted = `(${x.substring(0,3)}) ${x.substring(3,6)}`;
+    } else if (x.length > 0) {
+        formatted = `(${x}`;
+    }
+
+    e.target.value = formatted;
+});
+</script>
 
 </body>
 </html>
